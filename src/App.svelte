@@ -1,5 +1,5 @@
 <script>
-  import Task from "./Tasks.svelte";
+  import Task from "./Tasks/Tasks.svelte";
 </script>
 
 <style type="text/scss">
