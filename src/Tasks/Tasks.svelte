@@ -6,7 +6,4 @@
   @import "tasks.scss";
 </style>
 
-
-<div class="tasks-container">
-    
-</div>
+<h1>Hello World!</h1>

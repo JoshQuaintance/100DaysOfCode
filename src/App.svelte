@@ -1,16 +1,15 @@
 <script>
-  import Task from "./Tasks/Tasks.svelte";
+  import Tasks from "./Tasks/Tasks.svelte";
 </script>
 
 <style type="text/scss">
   @import "styles.scss";
-
 </style>
 
 <!-- Start of HTML -->
 <div class="shell">
   <main>
-    <Task/>
+    <Tasks />
   </main>
 
   <footer>
