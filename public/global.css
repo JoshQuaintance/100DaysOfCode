@@ -1,1 +1,114 @@
-/* No CSS */ /*# sourceMappingURL=global.css.map */
+body {
+	margin-left: 0;
+	background-color: #fff !important;
+	color: black;
+	clip-path: circle(100px at 50% 50%);
+	transition: all 1s ease;
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	height: 10vh;
+	z-index: 1000;
+	background-color: rgb(255, 255, 255);
+	transition: all .5s ease;
+}
+
+@keyframes fade-bottom {
+	from {
+		transform: translateY(-100px);
+	}
+	to {
+		transform: translateY(0px);
+	}
+}
+
+@keyframes fade-bottom-out {
+	from {
+		transform: translateY(0px);
+	}
+	to {
+		transform: translateY(-100px);
+	}
+}
+
+.headerScrolled {
+	box-shadow: 1px 5px 10px rgba(0, 0, 0, .3);
+	transition: all .5s ease;
+}
+
+.headerScrolled #mainLogo {
+	visibility: visible;
+	animation: fade-bottom 1s;
+}
+
+header h1 {
+	position: relative;
+	padding-left: 50px;
+	padding-top: 0;
+	margin-top: 15px;
+}
+
+.headerLogos {
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+	right: 80px;
+	top: 15px;
+	position: absolute;
+	transition: all .5s ease;
+}
+
+.headerLogos img {
+	display: block;
+	filter: invert(100%) grayscale(100%) brightness(80%);
+	margin-left: 10px;
+	margin-right: 10px;
+	transition: all .5s ease;
+}
+
+#mainLogo {
+	visibility: hidden !important;
+	margin-top: 5px;
+	display: block;
+	width: 50px;
+	height: auto;
+	filter: grayscale(75%);
+	cursor: pointer;
+	margin-left: 80px;
+	transition: all .5s ease;
+	animation: fade-bottom-out 1s;
+}
+
+#mainLogo:hover {
+	filter: grayscale(0);
+	transition: all .5s ease;
+}
+
+#githubMark {
+	width: 35px;
+	transition: all .5s ease;
+}
+
+#twitterLogo {
+	width: 40px;
+	transition: all .5s ease;
+}
+
+#githubMark:hover {
+	filter: invert(0) brightness(200%) contrast(200%);
+	cursor: pointer;
+	transition: all .5s ease;
+}
+
+#twitterLogo:hover {
+	filter: grayscale(0) invert(0);
+	cursor: pointer;
+	transition: all .5s ease;
+}

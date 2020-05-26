@@ -1,0 +1,60 @@
+@mixin transition($prop, $dur, $timing) {
+	-webkit-transition: $prop $dur $timing;
+	-mox-transition: $prop $dur $timing;
+	-ms-transition: $prop $dur $timing;
+	transition: $prop $dur $timing;
+}
+
+.containerHovered {
+	transform: translateY(-10px) translateX(-10px);
+	box-shadow: 10px 10px 5px rgba(156, 128, 209, 0.5) !important;
+	@include transition(all, .5s, ease);
+	cursor: pointer !important;
+}
+
+.task-container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	width: 35%;
+	padding: 0 25px;
+	margin: 0 25px;
+	border: 2px solid #9d80d1 !important;
+	border-radius: 15px;
+	margin-top: 12.5px;
+	margin-bottom: 12.5px;
+	box-shadow: 0px 0px 25px rgba(156, 128, 209, 0.432);
+	@include transition(all, .5s, ease);
+	cursor: pointer;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	h1 {
+		font-size: 50px;
+		text-align: left;
+		float: right;
+		font-family: 'Indie Flower', cursive;
+	}
+
+	ul {
+		font-size: 25px;
+		font-family: cursive;
+	}
+
+	p {
+		font-family: 'Chelsea Market', cursive;
+		font-size: 25px;
+	}
+
+	#clickMore,
+	#clickMore2 {
+		@include transition(all, .5s, ease);
+	}
+}
+
+.day1 {
+	display: flex;
+	align-content: center;
+}
