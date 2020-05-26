@@ -20,6 +20,9 @@
       <Tasks {...projects.Day2} />
       <Tasks {...projects.Day3} />
       <Tasks {...projects.Day4} />
+      <Tasks {...projects.Day5} />
+      <Tasks {...projects.Day6} />
+      
     </div>
   </main>
 

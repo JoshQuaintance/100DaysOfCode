@@ -51,9 +51,20 @@ export let projects = {
 			{ list: "Learn and used Svelte animations" },
 			{ list: "Gave elements and cards hover effects" }
 		]
+	},
+
+	Day6 : {
+		title       : "Day 6",
+		description : "Design Simplification",
+		list        : [
+			{ list: "Made this site style into cards" },
+			{ list: "Simplified site design" },
+			{ list: "Made cards clickable" },
+			{ list: "When cards clicked, more details appear" }
+		]
 	}
 };
 
 /*
- 
+
 */
