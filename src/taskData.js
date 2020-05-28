@@ -62,9 +62,18 @@ export let projects = {
 			{ list: "Made cards clickable" },
 			{ list: "When cards clicked, more details appear" }
 		]
+	},
+
+	Day7 : {
+		title: "Day 7",
+		description: "Improved Logic",
+		list : [
+			{ list: "Improved this site's logic" },
+			{ list: "Fixed a lot of bugs" },
+			{ list: "Added more animations and functions" }
+		]
 	}
 };
-
 /*
 
 */
