@@ -18,11 +18,11 @@
     <p>This is where I am going to post about the projects I made</p>
 
     <div class="tasks-container">
-
+<!--
     {#each dataLength as _, i}
       <Tasks />
     {/each}
-
+-->
 
       <Tasks {...projects.Day1} />
       <Tasks {...projects.Day2} />
