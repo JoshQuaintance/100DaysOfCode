@@ -1,6 +1,9 @@
 <script>
   import Tasks from "./Tasks/Tasks.svelte";
   import { projects } from "./taskData";
+
+  let dataLength = Object.keys(projects);
+
 </script>
 
 <style type="text/scss">
@@ -16,13 +19,18 @@
 
     <div class="tasks-container">
 
+    {#each dataLength as _, i}
+      <Tasks />
+    {/each}
+
+  <!--
       <Tasks {...projects.Day1} />
       <Tasks {...projects.Day2} />
       <Tasks {...projects.Day3} />
       <Tasks {...projects.Day4} />
       <Tasks {...projects.Day5} />
       <Tasks {...projects.Day6} />
-      
+      -->
     </div>
   </main>
 
