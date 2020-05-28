@@ -5,7 +5,9 @@
   export let list;
   export let description;
 
-  let listGiven = list.length > 0;
+ 
+
+  //let listGiven = list.length > 0;
   let hovering = false,
     notHovering = true,
     detailDisplayed = false;
@@ -79,7 +81,7 @@
   <h1>{title}</h1>
   <p>{description}</p>
 
-  {#if listGiven}
+  <!--{#if listGiven}-->
     <ul
       class={detailDisplayed == true ? 'detailDisplayed' : ''}
       transition:fade>
@@ -87,7 +89,7 @@
         <li>{list}</li>
       {/each}
     </ul>
-  {/if}
+  <!--{/if}-->
 
   {#if hovering}
     <p

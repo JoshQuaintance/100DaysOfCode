@@ -18,18 +18,18 @@
     <p>This is where I am going to post about the projects I made</p>
 
     <div class="tasks-container">
-<!--
-    {#each dataLength as _, i}
-      <Tasks />
-    {/each}
--->
 
-      <Tasks {...projects.Day1} />
-      <Tasks {...projects.Day2} />
-      <Tasks {...projects.Day3} />
-      <Tasks {...projects.Day4} />
-      <Tasks {...projects.Day5} />
-      <Tasks {...projects.Day6} />
+      {#each dataLength as _, i}
+        <Tasks {...projects[`${_}`]}/>
+      {/each}
+
+      <!--
+      <Tasks {...projects[0]} />
+      <Tasks {...projects[1]} />
+      <Tasks {...projects[2]} />
+      <Tasks {...projects[3]} />
+      <Tasks {...projects[4]} />
+      <Tasks {...projects[5]} />-->
 
     </div>
   </main>
