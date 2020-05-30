@@ -40,6 +40,7 @@
 	box-shadow: 0px 0px 25px rgba(156, 128, 209, 0.432);
 	@include transition(all, .5s, ease);
 	cursor: pointer;
+	height: fit-content;
 
 	&:hover {
 		cursor: pointer;
@@ -50,6 +51,7 @@
 		text-align: left;
 		float: right;
 		font-family: 'Indie Flower', cursive;
+		
 	}
 
 	ul {
@@ -63,14 +65,65 @@
 		font-family: 'Chelsea Market', cursive;
 		font-size: 25px;
 	}
-
-	#clickMore,
-	#clickMore2 {
-		@include transition(all, .5s, ease);
-	}
 }
 
 .day1 {
 	display: flex;
 	align-content: center;
+}
+
+//When card details is displayed.
+.detailDisplayed {
+	display: inline-block !important;
+
+	h1 {
+		font-size: 100px;
+	}
+
+	ul {
+		font-size: 50px;
+	}
+}
+
+.displayDetails {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	margin: 0;
+	border: none !important;
+	flex-direction: column;
+	justify-content: center !important;
+	position: fixed;
+	margin-left: calc(75% / 2 * -1);
+	background-color: white;
+	z-index: 1002;
+	flex-wrap: wrap;
+	align-items: center;
+
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: 100px !important;
+	}
+
+	&.containerHovered {
+		transform: none !important;
+		box-shadow: none !important;
+		cursor: default !important;
+	}
+
+	#clickMore {
+		visibility: hidden !important;
+		transition: none !important;
+	}
+}
+
+#clickMore {
+	transition: all .5s ease;
+}
+
+#exit-card {
+	position: absolute;
+	bottom: 15px;
 }

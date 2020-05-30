@@ -7,5 +7,5 @@ $(document).on("scroll", () => {
 });
 
 $(document).ready(() => {
-	$("body").css("clip-path", "circle(1000px)");
+	$("body").css("clip-path", "circle(1000% at 50% 50%)");
 });

@@ -65,15 +65,38 @@ export let projects = {
 	},
 
 	Day7 : {
-		title: "Day 7",
-		description: "Improved Logic",
-		list : [
+		title       : "Day 7",
+		description : "Improved Logic",
+		list        : [
 			{ list: "Improved this site's logic" },
 			{ list: "Fixed a lot of bugs" },
 			{ list: "Added more animations and functions" }
 		]
+	},
+
+	Day8 : {
+		title       : "Day 8",
+		description : "More Functional",
+		list        : [
+			{ list: "Fixed some glitchy annoying bugs on my website" },
+			{ list: "Update some designs on this website" },
+			//prettier-ignore
+			{ list: "Made my app takes data from an object of objects that contains more objects that contains array of object (phew), so now I don't need to hard code it." }
+		]
+	},
+
+	Day9 : {
+		title       : "Day 9",
+		description : "Design and Day Counting",
+		list        : [
+			{ list: "Added a count up day counter so I don't forget what day I'm in the challenge (YAY...)" },
+			{ list: "Added some fancy link animations" },
+			{ list: "Added Social Links animations" }
+		]
 	}
 };
 /*
-
+Added a count up day counter so I don't forget what day I'm in the challenge.
+Added some fancy link animations.
+Added Social Links animations.
 */
