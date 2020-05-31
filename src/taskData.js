@@ -1,5 +1,5 @@
 export let projects = {
-	Day1 : {
+	Day1  : {
 		title       : "Day 1",
 		description : "Learning a new framework: Svelte.",
 		list        : [
@@ -10,7 +10,7 @@ export let projects = {
 		]
 	},
 
-	Day2 : {
+	Day2  : {
 		title       : "Day 2",
 		description : "Advancing on Svelte with Logic",
 		list        : [
@@ -20,7 +20,7 @@ export let projects = {
 		]
 	},
 
-	Day3 : {
+	Day3  : {
 		title       : "Day 3",
 		description : "Events, and styling",
 		list        : [
@@ -31,7 +31,7 @@ export let projects = {
 		]
 	},
 
-	Day4 : {
+	Day4  : {
 		title       : "Day 4",
 		description : "Start to server side programming",
 		list        : [
@@ -41,7 +41,7 @@ export let projects = {
 		]
 	},
 
-	Day5 : {
+	Day5  : {
 		title       : "Day 5",
 		description : "Applying designs and animation",
 		list        : [
@@ -53,7 +53,7 @@ export let projects = {
 		]
 	},
 
-	Day6 : {
+	Day6  : {
 		title       : "Day 6",
 		description : "Design Simplification",
 		list        : [
@@ -64,7 +64,7 @@ export let projects = {
 		]
 	},
 
-	Day7 : {
+	Day7  : {
 		title       : "Day 7",
 		description : "Improved Logic",
 		list        : [
@@ -74,7 +74,7 @@ export let projects = {
 		]
 	},
 
-	Day8 : {
+	Day8  : {
 		title       : "Day 8",
 		description : "More Functional",
 		list        : [
@@ -85,7 +85,7 @@ export let projects = {
 		]
 	},
 
-	Day9 : {
+	Day9  : {
 		title       : "Day 9",
 		description : "Design and Day Counting",
 		list        : [
@@ -93,10 +93,18 @@ export let projects = {
 			{ list: "Added some fancy link animations" },
 			{ list: "Added Social Links animations" }
 		]
+	},
+
+	Day10 : {
+		title       : "Day 10",
+		description : "Algorithm Challenges",
+		list        : [
+			{ list: "Did some JavaScript algorithm challenges (5-7)" },
+			{ list: "Created some of my own pre-made components" }
+		]
 	}
 };
 /*
-Added a count up day counter so I don't forget what day I'm in the challenge.
-Added some fancy link animations.
-Added Social Links animations.
+Did some JavaScript algorithm challenges (5-7)
+Created some of my own pre-made components.
 */

@@ -4,6 +4,7 @@
 
   let dataLength = Object.keys(projects);
 
+
   function countUpTo100(countFrom) {
     countFrom = new Date(countFrom).getTime();
     var now = new Date(),
@@ -13,7 +14,7 @@
     var secondsInADay = 60 * 60 * 1000 * 24;
 
     let days = Math.floor((timeDifference / secondsInADay) * 1);
-    return days;
+    return days
     /*
     let idEl = document.getElementById(id);
     idEl.getElementsByClassName("days")[0].innerHTML = days;*/

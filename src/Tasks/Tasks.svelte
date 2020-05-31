@@ -48,6 +48,8 @@
   </ul>
   <!--{/if}-->
 
+  
+
   <p
     style={hovering == true ? 'opacity: 1' : 'opacity: 0'}
     id="clickMore"
