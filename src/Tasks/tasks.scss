@@ -5,6 +5,9 @@
 	transition: $prop $dur $timing;
 }
 
+/* Variables for Font Families */
+@import "../base_variables.scss";
+
 .containerHovered {
 	transform: translateY(-10px) translateX(-10px);
 	box-shadow: 10px 10px 5px rgba(156, 128, 209, 0.5) !important;
@@ -26,21 +29,34 @@
 	}
 }
 
-.task-container {
+.container-container {
+	position: relative;
 	display: flex;
 	flex-direction: column;
-	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 	width: 35%;
 	padding: 0 25px;
 	margin: 0 25px;
-	border: 2px solid #9d80d1 !important;
-	border-radius: 15px;
 	margin-top: 12.5px;
 	margin-bottom: 12.5px;
+}
+
+.task-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	padding: 0 25px;
+	margin: 0 25px;
+	width: 100%;
+	border: 2px solid #9d80d1 !important;
+	border-radius: 15px;
 	box-shadow: 0px 0px 25px rgba(156, 128, 209, 0.432);
 	@include transition(all, .5s, ease);
 	cursor: pointer;
 	height: fit-content;
+	transition: all .5s ease;
 
 	&:hover {
 		cursor: pointer;
@@ -50,8 +66,7 @@
 		font-size: 50px;
 		text-align: left;
 		float: right;
-		font-family: 'Indie Flower', cursive;
-		
+		font-family: $indie-flower;
 	}
 
 	ul {
@@ -73,19 +88,9 @@
 }
 
 //When card details is displayed.
-.detailDisplayed {
-	display: inline-block !important;
-
-	h1 {
-		font-size: 100px;
-	}
-
-	ul {
-		font-size: 50px;
-	}
-}
 
 .displayDetails {
+	position: fixed;
 	width: 100%;
 	height: 100%;
 	top: 0;
@@ -94,12 +99,12 @@
 	border: none !important;
 	flex-direction: column;
 	justify-content: center !important;
-	position: fixed;
 	margin-left: calc(75% / 2 * -1);
 	background-color: white;
 	z-index: 1002;
 	flex-wrap: wrap;
 	align-items: center;
+	transition: all .5s ease;
 
 	ul {
 		display: flex;
@@ -119,6 +124,18 @@
 	}
 }
 
+.detailDisplayed {
+	display: inline-block !important;
+
+	h1 {
+		font-size: 100px;
+	}
+
+	ul {
+		font-size: 50px;
+	}
+}
+
 #clickMore {
 	transition: all .5s ease;
 }
@@ -126,4 +143,9 @@
 #exit-card {
 	position: absolute;
 	bottom: 15px;
+}
+
+.hidden {
+	display: none;
+	z-index: -500;
 }

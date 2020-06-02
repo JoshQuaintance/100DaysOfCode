@@ -1,11 +1,246 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+/* Variables for Font Families */
+@import "base_variables.scss";
+
+header {
+	display: flex;
+	flex-direction: row;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	height: 10vh;
+	z-index: 1000;
+	background-color: rgb(255, 255, 255);
+	transition: all .5s ease;
+}
+
+@keyframes fade-bottom {
+	from {
+		transform: translateY(-100px);
+	}
+	to {
+		transform: translateY(0px);
+	}
+}
+
+@keyframes fade-bottom-out {
+	from {
+		transform: translateY(0px);
+	}
+	to {
+		transform: translateY(-100px);
+	}
+}
+
+a {
+	position: relative;
+}
+
+.headerScrolled {
+	box-shadow: 1px 5px 10px rgba(0, 0, 0, .3);
+	transition: all .5s ease;
+}
+
+.headerScrolled #mainLogo {
+	visibility: visible !important;
+	animation: fade-bottom 1s;
+}
+
+header h1 {
+	position: relative;
+	padding-left: 50px;
+	padding-top: 0;
+	margin-top: 15px;
+}
+
+.headerLogos {
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+	right: 80px;
+	top: 15px;
+	position: absolute;
+	transition: all .5s ease;
+}
+
+.headerLogos img {
+	display: block;
+	filter: invert(100%) grayscale(100%) brightness(80%);
+	margin-left: 10px;
+	margin-right: 10px;
+	transition: all .5s ease;
+}
+
+#mainLogo {
+	visibility: hidden;
+	margin-top: 5px;
+	display: block;
+	width: 50px;
+	height: auto;
+	filter: grayscale(75%);
+	cursor: pointer;
+	margin-left: 80px;
+	transition: all .5s ease;
+	animation: fade-bottom-out 1s;
+
+	&:hover {
+		filter: grayscale(0);
+		transition: all .5s ease;
+	}
+}
+
+#githubMark {
+	position: relative;
+	width: 35px;
+	transition: all .5s ease;
+	border-radius: 100%;
+}
+
+#twitterLogo {
+	width: 37px;
+	position: relative;
+	top: 2px;
+	transition: all .5s ease;
+}
+
+#githubLink {
+	&:after {
+		content: "";
+		height: 100%;
+		width: 50px;
+		position: absolute;
+		background-image: url("/images/github.svg");
+		background-size: 35px;
+		background-repeat: no-repeat;
+		top: 0px;
+		left: 10px;
+		z-index: -1;
+		transition: all .5s ease-out;
+		opacity: 50%;
+	}
+
+	&:hover:after {
+		height: 100%;
+		width: 35px;
+		transform: scale(1.4);
+		z-index: -1;
+		transition: all .5s ease-out;
+	}
+
+	&:hover #githubMark {
+		filter: invert(0) brightness(200%) contrast(200%);
+		cursor: pointer;
+		transition: all .5s ease;
+	}
+}
+
+#twitterLink {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 4;
+
+	&:before {
+		content: "";
+		height: 100%;
+		width: 50px;
+		position: absolute;
+		background-image: url("/images/twitter.svg");
+		background-size: 36px;
+		background-repeat: no-repeat;
+		top: 5px;
+		left: 10px;
+		z-index: -1;
+		transition: all .5s ease-out;
+		opacity: 50%;
+	}
+
+	&:hover:before {
+		height: 100%;
+		width: 35px;
+		transform: scale(1.5);
+		z-index: -1;
+		transition: all .5s ease-out;
+	}
+
+	&:hover #twitterLogo {
+		cursor: pointer;
+		z-index: 5;
+		transition: all .5s ease;
+	}
+}
+
+#home {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	#homeBtn {
+		width: 35px;
+	}
+
+	&:before {
+		content: "";
+		opacity: 0;
+		height: 100%;
+		width: 35px;
+		position: absolute;
+		background-image: url("/images/home.svg");
+		background-size: 32px;
+		background-repeat: no-repeat;
+		top: 0px;
+		left: 11px;
+		z-index: -1;
+		transition: all .5s ease-out;
+	}
+
+	&:hover:before {
+		opacity: 1;
+		height: 100%;
+		width: 35px;
+		transform: scale(1.5);
+		z-index: -1;
+		transition: all .5s ease-out;
+	}
+
+	&:hover #twitterLogo {
+		cursor: pointer;
+		z-index: 5;
+		transition: all .5s ease;
+	}
+}
+
+@keyframes loaderSpin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.loader {
+	opacity: 0;
+	border: 16px solid rgba(145, 88, 250, 0.336);
+	border-top: 16px solid rgb(109, 35, 247);
+	position: fixed;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	left: 50%;
+	top: 50%;
+	margin-left: calc(60px / -2);
+	margin-top: calc(60px / -2);
+	animation: loaderSpin 1s linear infinite;
+	z-index: 10000;
+	transition: opacity .5s ease;
+}
 
 .shell {
 	margin-top: 100px;
 	padding: 0 8px;
+	transition: clip-path .5s ease;
 
 	p {
 		font-size: 25px;
@@ -55,27 +290,15 @@ main {
 
 	p {
 		text-align: center;
-		font-family: 'Bitter', cursive;
+		font-family: $bitter;
 		letter-spacing: 1.5px;
 	}
 
 	h1 {
 		text-align: center;
 		font-size: 50px;
-		font-family: 'Dancing Script', cursive;
+		font-family: $dancing-script;
 	}
-}
-
-header {
-	border-bottom-left-radius: 15px;
-	border-bottom-right-radius: 15px;
-	background-color: #b0b0b0;
-	padding: 0 50px;
-	width: 100%;
-	margin-left: 0;
-	position: sticky;
-	top: 0px;
-	height: 50px;
 }
 
 footer {
@@ -90,23 +313,65 @@ footer {
 	}
 }
 
+/* Dev Logs and Projects */
+.link-containers {
+	$padding: 25px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	.projects-cont,
+	.dev-log {
+		width: 50%;
+		border-radius: 15px;
+		text-align: center;
+		font-size: 50px;
+		padding: 0 15px;
+		padding-top: $padding;
+		padding-bottom: $padding;
+		margin: 50px 0;
+		border: 2px solid black;
+	}
+
+	.dev-log {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.tasks-container {
+			width: 100%;
+		}
+
+		p {
+			padding: 0 15px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			border: 2px solid black;
+			border-radius: 15px;
+			cursor: pointer;
+		}
+
+		h6 {
+			margin: 15px 0;
+			padding: 0;
+			font-family: $chelsea-market;
+			font-weight: 100;
+			font-size: .5em;
+		}
+	}
+}
+
 .tasks-container {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-around;
-}
 
-.link-containers {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
-
-	span {
-		padding-top: 25px;
-		padding-bottom: 25px;
-		padding-left: 40px;
-		padding-right: 40px;
-		border: 2px solid black;
+	#displayingDetails {
+		display: none;
 	}
 }
+
+
