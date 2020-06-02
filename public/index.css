@@ -1,0 +1,10 @@
+body {
+  margin: 0 !important;
+  background-color: #fff;
+  color: black;
+  -webkit-clip-path: circle(10000px at 50% 50%);
+          clip-path: circle(10000px at 50% 50%);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
