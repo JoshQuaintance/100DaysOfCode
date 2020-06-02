@@ -5,8 +5,6 @@
 
   let dataLength = Object.keys(projects);
   let lastOfDataList = dataLength.length;
-  
-
 
   function countUpTo100(countFrom) {
     countFrom = new Date(countFrom).getTime();
@@ -24,19 +22,27 @@
   }
 
   let showProjects = false;
-  
-  let moreProjects = () => {(showProjects = !showProjects)
-  console.log(showProjects)
+  let moreProjects = () => {
+    showProjects = !showProjects;
+    console.log(showProjects);
   };
 
   let homeBtn = () => {
-    if(showProjects == true) {
+    if (showProjects == true) {
       loader(moreProjects);
-    } else if(showProjects == false) return;
-  }
+    } else if (showProjects == false) return;
+  };
 
+  let headerScrolled = false;
 
-  
+  window.addEventListener("scroll", () => {
+    if (document.documentElement.scrollTop > 1) {
+      headerScrolled = true;
+    } else {
+      headerScrolled = false;
+    }
+  });
+
 </script>
 
 <style type="text/scss">
@@ -62,9 +68,9 @@
   }
 </style>
 
-<div class="loader"/>
+<div class="loader" />
 
-<header>
+<header class={headerScrolled == true ? 'headerScrolled' : ''}>
 
   <a href="https://google.com">
     <img src="./images/Logo.svg" alt="Logo" id="mainLogo" />
@@ -73,7 +79,7 @@
   <div class="headerLogos">
 
     <a href="#top" id="home">
-      <img src="./images/home.svg" alt="Home" on:click={homeBtn} id="homeBtn"/>
+      <img src="./images/home.svg" alt="Home" on:click={homeBtn} id="homeBtn" />
     </a>
 
     <a href="https://github.com/joshuapelealu" target="_blank" id="githubLink">
@@ -88,7 +94,7 @@
 </header>
 
 <!-- Start of HTML -->
-<div class="shell" >
+<div class="shell">
 
   <main>
     <h1>Why hello there, Catalactics here...</h1>
@@ -100,7 +106,7 @@
       Challenge Website Today is day
       <span id="dayCount">{countUpTo100('May 20, 2020 00:00:00')}</span>
     </p>
-    
+
     {#if showProjects == false}
       <div class="link-containers">
         <div class="projects-cont">
@@ -113,7 +119,13 @@
           <h6>Latest From The Dev Logs</h6>
           <Tasks {...projects[`Day${lastOfDataList}`]} style={'width: 80%;'} />
 
-          <p on:click={() => {loader(moreProjects); console.log(showProjects)}}>View More</p>
+          <p
+            on:click={() => {
+              loader(moreProjects);
+              console.log(showProjects);
+            }}>
+            View More
+          </p>
         </div>
       </div>
     {:else}

@@ -6,7 +6,7 @@ export let loader = funcCallBack => {
     $("body").css("overflow", "hidden")
     $(".shell").css({
         "transition": "clip-path .5s ease",
-        "clip-path": "circle(0px at 50% 50%)"
+        "clip-path": "circle(0% at 50% 50%)"
     })
 
     setTimeout(() => {
@@ -15,9 +15,10 @@ export let loader = funcCallBack => {
 
     setTimeout(() => {
       $(".loader").css("opacity", "0");
-      $(".shell").css("clip-path", "circle(1000px at 50% 50%)");
+      $(".shell").css("clip-path", "circle(1000% at 50% 50%)");
       $("header").css("opacity", "1");
       $("body").css("overflow", "auto")
     }, 1500);
   };
   
+

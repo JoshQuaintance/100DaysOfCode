@@ -13,6 +13,18 @@ header {
 	z-index: 1000;
 	background-color: rgb(255, 255, 255);
 	transition: all .5s ease;
+
+	
+}
+
+.headerScrolled {
+	box-shadow: 1px 5px 10px rgba(0, 0, 0, .3);
+	transition: all .5s ease;
+
+	#mainLogo {
+		visibility: visible !important;
+		animation: fade-bottom 1s;
+	}
 }
 
 @keyframes fade-bottom {
@@ -37,15 +49,7 @@ a {
 	position: relative;
 }
 
-.headerScrolled {
-	box-shadow: 1px 5px 10px rgba(0, 0, 0, .3);
-	transition: all .5s ease;
-}
 
-.headerScrolled #mainLogo {
-	visibility: visible !important;
-	animation: fade-bottom 1s;
-}
 
 header h1 {
 	position: relative;
@@ -175,7 +179,7 @@ header h1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
+
 	#homeBtn {
 		width: 35px;
 	}
@@ -373,5 +377,3 @@ footer {
 		display: none;
 	}
 }
-
-

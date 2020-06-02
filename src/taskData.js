@@ -102,9 +102,29 @@ export let projects = {
 			{ list: "Did some JavaScript algorithm challenges (5-7)" },
 			{ list: "Created some of my own pre-made components" }
 		]
+	},
+
+	Day11 : {
+		title       : "Day 11",
+		description : "Algorithm Challenges",
+		list        : [
+			{ list: "Did some more algorithm challenges in FCC" },
+			{ list: "Created some more pre-made components for myself" },
+			{ list: "Updated some design in my website" }
+		]
+	},
+
+	Day12 : {
+		title       : "Day 12",
+		description : "Website Improvements",
+		list        : [
+			{ list: "Moved header to the App.svelte itself instead of html" },
+			{ list: "Added loading animation" },
+			{ list: "Main page changed" },
+			{ list: "Added home button" }
+		]
 	}
 };
 /*
-Did some JavaScript algorithm challenges (5-7)
-Created some of my own pre-made components.
+
 */
