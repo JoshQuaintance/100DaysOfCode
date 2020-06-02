@@ -42,7 +42,6 @@
       headerScrolled = false;
     }
   });
-
 </script>
 
 <style type="text/scss">
