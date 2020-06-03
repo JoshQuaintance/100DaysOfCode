@@ -71,7 +71,7 @@
 
 <header class={headerScrolled == true ? 'headerScrolled' : ''}>
 
-  <a href="https://google.com">
+  <a href="javascript:void(0)">
     <img src="./images/Logo.svg" alt="Logo" id="mainLogo" />
   </a>
 
