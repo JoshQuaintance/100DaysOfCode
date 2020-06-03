@@ -112,11 +112,10 @@ header h1 {
 	&:after {
 		content: "";
 		height: 100%;
-		width: 50px;
+		width: 35px;
 		position: absolute;
-		background-image: url("/images/github.svg");
-		background-size: 35px;
-		background-repeat: no-repeat;
+		background-color: transparent;
+		border-radius: 50%;
 		top: 0px;
 		left: 10px;
 		z-index: -1;
@@ -127,7 +126,8 @@ header h1 {
 	&:hover:after {
 		height: 100%;
 		width: 35px;
-		transform: scale(1.4);
+		transform: scale(1.2);
+		background-color: #616161;
 		z-index: -1;
 		transition: all .5s ease-out;
 	}
@@ -144,7 +144,8 @@ header h1 {
 	justify-content: center;
 	align-items: center;
 	z-index: 4;
-
+	filter: grayscale(100%) brightness(125%);
+	
 	&:before {
 		content: "";
 		height: 100%;
@@ -160,10 +161,12 @@ header h1 {
 		opacity: 50%;
 	}
 
+	
 	&:hover:before {
 		height: 100%;
 		width: 35px;
 		transform: scale(1.5);
+		filter: none;
 		z-index: -1;
 		transition: all .5s ease-out;
 	}
@@ -179,12 +182,13 @@ header h1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transition: filter .5s ease;
+	transition: transform .5s ease, filter .5s ease;
 
 	#homeBtn {
 		width: 35px;
 	}
 
+	/*
 	&:before {
 		content: "";
 		opacity: 0;
@@ -198,13 +202,15 @@ header h1 {
 		left: 11px;
 		z-index: -1;
 		transition: all .5s ease-out;
-	}
+	}*/
 
 	&:hover {
-		filter: grayscale(0) contrast(100%) brightness(0%);
-		transition: filter .5s ease;
+		transform: scale(1.2);
+		filter: brightness(0);
+		transition: transform .5s ease, filter .5s ease;
 	}
 
+	/*
 	&:hover:before {
 		opacity: 40%;
 		height: 100%;
@@ -212,7 +218,7 @@ header h1 {
 		transform: scale(1.5);
 		z-index: -1;
 		transition: all .5s ease-out;
-	}
+	}*/
 
 	&:hover #twitterLogo {
 		cursor: pointer;
