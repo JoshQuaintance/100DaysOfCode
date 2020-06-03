@@ -179,6 +179,7 @@ header h1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: filter .5s ease;
 
 	#homeBtn {
 		width: 35px;
@@ -199,8 +200,13 @@ header h1 {
 		transition: all .5s ease-out;
 	}
 
+	&:hover {
+		filter: grayscale(0) contrast(100%) brightness(0%);
+		transition: filter .5s ease;
+	}
+
 	&:hover:before {
-		opacity: 1;
+		opacity: 40%;
 		height: 100%;
 		width: 35px;
 		transform: scale(1.5);
