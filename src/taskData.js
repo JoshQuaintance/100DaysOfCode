@@ -1,4 +1,4 @@
-export let projects = {
+	export let devLogs = {
 	Day1  : {
 		title       : "Day 1",
 		description : "Learning a new framework: Svelte.",

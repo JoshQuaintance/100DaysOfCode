@@ -1,11 +1,13 @@
 <script>
   import Tasks from "./Tasks/Tasks.svelte";
+  import Projects from "./projects/projects.svelte";
   import { loader } from "./scripts";
-  import { projects } from "./taskData";
+  import { devLogs } from "./taskData";
 
-  let dataLength = Object.keys(projects);
+  let dataLength = Object.keys(devLogs);
   let lastOfDataList = dataLength.length;
 
+  // Count up function
   function countUpTo100(countFrom) {
     countFrom = new Date(countFrom).getTime();
     var now = new Date(),
@@ -20,19 +22,23 @@
     let idEl = document.getElementById(id);
     idEl.getElementsByClassName("days")[0].innerHTML = days;*/
   }
+  // ----------
 
-  let showProjects = false;
-  let moreProjects = () => {
-    showProjects = !showProjects;
-    console.log(showProjects);
+  // Dev Log Option functions
+  let showDevLogs = false;
+  let moreDevLogs = () => {
+    showDevLogs = !showDevLogs;
+    console.log(showDevLogs);
   };
 
   let homeBtn = () => {
-    if (showProjects == true) {
-      loader(moreProjects);
-    } else if (showProjects == false) return;
+    if (showDevLogs == true) {
+      loader(moreDevLogs);
+    } else if (showDevLogs == false) return;
   };
+  // ----------
 
+  // Header scrolling function
   let headerScrolled = false;
 
   window.addEventListener("scroll", () => {
@@ -42,6 +48,11 @@
       headerScrolled = false;
     }
   });
+  // ----------
+
+  // More projects functions
+
+  // ----------
 </script>
 
 <style type="text/scss">
@@ -71,7 +82,7 @@
 
 <header class={headerScrolled == true ? 'headerScrolled' : ''}>
 
-  <a href="javascript:void(0)">
+  <a href="#top">
     <img src="./images/Logo.svg" alt="Logo" id="mainLogo" />
   </a>
 
@@ -106,22 +117,22 @@
       <span id="dayCount">{countUpTo100('May 20, 2020 00:00:00')}</span>
     </p>
 
-    {#if showProjects == false}
+    {#if showDevLogs == false}
       <div class="link-containers">
         <div class="projects-cont">
           <span>Projects</span>
-
+          <Projects customStyle={'width: 100%;'}/>
         </div>
 
         <div class="dev-log">
           <span>Dev Log</span>
           <h6>Latest From The Dev Logs</h6>
-          <Tasks {...projects[`Day${lastOfDataList}`]} style={'width: 80%;'} />
+          <Tasks {...devLogs[`Day${lastOfDataList}`]} style={'width: 80%;'} />
 
           <p
             on:click={() => {
-              loader(moreProjects);
-              console.log(showProjects);
+              loader(moreDevLogs);
+              console.log(showDevLogs);
             }}>
             View More
           </p>
@@ -131,7 +142,7 @@
       <div class="tasks-container">
 
         {#each dataLength as _, i}
-          <Tasks {...projects[`${_}`]} />
+          <Tasks {...devLogs[`${_}`]} />
         {/each}
 
       </div>
