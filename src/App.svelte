@@ -121,8 +121,8 @@
       <div class="link-containers">
         <div class="projects-cont">
           <span>Projects</span>
+          <p style="margin-top: 50px;">Featured Project</p>
           <Projects
-            customStyle={'margin-top: 50px;'}
             projectTitle={'Codes Codes Codes!'} />
 
         </div>

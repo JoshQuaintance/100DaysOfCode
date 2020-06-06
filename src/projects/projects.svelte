@@ -1,5 +1,11 @@
 <script>
-  import Tags from '../Tags/tags.svelte';
+  import Tags from "../Tags/tags.svelte";
+
+  let HTML = true,
+    SCSS = true,
+    JS = true,
+    jQuery = true,
+    Svelte = true;
 
   export let customStyle, projectTitle;
 </script>
@@ -27,7 +33,7 @@
   </a>
 
   <h1 class="project-title">{projectTitle}</h1>
-  
-  <Tags />
+
+  <Tags {HTML} {SCSS} {jQuery} {JS} />
 
 </div>
