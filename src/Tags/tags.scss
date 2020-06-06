@@ -4,70 +4,72 @@
 
 // Animation Keyframes
 @keyframes width-animation {
-    from {width: 0%};
-    to {width: 65%};
+	from {
+		width: 0%;
+	}
+	to {
+		width: 65%;
+	}
 }
 
-// ----------  
+// ----------
 
-// Main Container 
+// Main Container
 .tags-cont {
-    display: flex;
-    flex-direction: row;
+	display: flex;
+	flex-direction: row;
 
-    p {
-        position: relative;
-        font-size: 15px;
-        margin: 0 6px;
-        padding: 0 2px;
+	p {
+		position: relative;
+		font-size: 15px;
+		margin: 0 6px;
+		padding: 0 2px;
 
-        // All tags color
-        &.html:before {
-            background-color: #e34c26;
-            filter: brightness(120%);
-        }
+		// All tags color
+		&.html:before {
+			background-color: #e34c26;
+			filter: brightness(120%);
+		}
 
-        &.scss:after {
-            background-color: #CD6799;
-            filter: brightness(120%);
-        }
+		&.scss:after {
+			background-color: #cd6799;
+			filter: brightness(120%);
+		}
 
-        // ----------
+		// ----------
 
-        &.left {
-            
-            &:before {
-                content: "";
-                position: absolute;
-                width: 102%; 
-                height: 15px;
-                animation: width-animation .5s ease-in-out;
-                border-radius: 15px;
-                left: 0px;
-                bottom: 0;qtp[]
-                z-index: -1;
-                padding-top: 2px;
-                padding-bottom: 2px;
-            }
-        }
+		&.left {
+			&:before {
+				content: "";
+				position: absolute;
+				width: 102%;
+				height: 15px;
+				animation: width-animation .5s ease-in-out;
+				border-radius: 15px;
+				left: 0px;
+				bottom: 0;
+				z-index: -1;
+				padding-top: 2px;
+				padding-bottom: 2px;
+			}
+		}
 
-        &.right {
-
-            &:after {
-                content: "";
-                position: absolute;
-                width: 102%;
-                height: 15px;
-                animation: width-animation .5s ease-in-out;
-                border-radius: 15px;
-                z-index: -1;
-                right: 0px;
-                bottom: 0;
-                padding-top: 2px;
-                padding-bottom: 2px;
-            }
-        }
-    }
+		&.right {
+			&:after {
+				content: "";
+				position: absolute;
+				width: 102%;
+				height: 15px;
+				animation: width-animation .5s ease-in-out;
+				border-radius: 15px;
+				z-index: -1;
+				right: 0px;
+				bottom: 0;
+				padding-top: 2px;
+				padding-bottom: 2px;
+			}
+		}
+	}
 }
 
 // ----------
