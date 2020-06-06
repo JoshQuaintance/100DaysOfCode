@@ -1,3 +1,14 @@
+@import "../base_variables.scss";
+
+// Local global variables
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+// ----------
+
+// Container for projects || Main container
 .projects-container {
 	display: flex;
 	flex-direction: column;
@@ -5,7 +16,6 @@
 	align-items: center;
 	width: 100%;
 	//border-radius: 50px;
-
 
 	.project-link {
 		border-radius: 15px;
@@ -25,4 +35,12 @@
 			//transition: transform .5s ease;
 		}
 	}
+
+	.project-title {
+		margin-top: 15px;
+		text-align: center;
+		font-size: 50px;
+		font-family: $indie-flower;
+	}
 }
+// ----------

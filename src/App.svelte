@@ -121,7 +121,10 @@
       <div class="link-containers">
         <div class="projects-cont">
           <span>Projects</span>
-          <Projects customStyle={'width: 100%;'}/>
+          <Projects
+            customStyle={'margin-top: 50px;'}
+            projectTitle={'Codes Codes Codes!'} />
+
         </div>
 
         <div class="dev-log">

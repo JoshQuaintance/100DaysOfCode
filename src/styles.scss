@@ -252,7 +252,7 @@ header h1 {
 	margin-left: calc(60px / -2);
 	margin-top: calc(60px / -2);
 	animation: loaderSpin 1s linear infinite;
-	z-index: 10000;
+	z-index: -1;
 	transition: opacity .5s ease;
 }
 
@@ -288,6 +288,8 @@ header h1 {
 		content: "";
 		position: absolute;
 		width: 2%;
+		opacity: 65%;
+		z-index: -1;
 		height: 20%;
 		right: 0;
 		top: 2px;
@@ -297,7 +299,7 @@ header h1 {
 
 	&:hover:after {
 		height: 100%;
-		width: 100%;
+		width: 80%;
 		transition: width .3s ease .3s, height .3s ease-in-out;
 	}
 }
