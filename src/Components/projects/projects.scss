@@ -1,0 +1,53 @@
+@import "../../base_variables.scss";
+
+// Local global variables
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+// ----------
+
+// Container for projects || Main container
+.projects-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	//border-radius: 50px;
+
+	.project-link {
+		border-radius: 15px;
+		overflow: hidden;
+		width: 100%;
+		height: 100%;
+	}
+
+	img {
+		width: 100%;
+		height: 100%;
+		transform: scale(1.3);
+		transition: transform .8s ease-in-out;
+
+		&:hover {
+			transform: scale(1.5);
+			//transition: transform .5s ease;
+		}
+	}
+
+	.project-title {
+		margin-top: 15px;
+		text-align: center;
+		font-size: 50px;
+		font-family: $indie-flower;
+	}
+
+	.project-description {
+		font-size: 25px;
+		margin-top: 0px;
+		margin-right: 50px;
+		margin-left: 50px;
+	}
+}
+// ----------
