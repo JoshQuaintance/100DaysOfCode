@@ -23,12 +23,14 @@
   let displayDetails = () => {
     detailDisplayed = !detailDisplayed;
   };
+
 </script>
 
 <style type="text/scss">
   @import "./tasks.scss";
 </style>
-<div class="container-container" style="{style}">
+
+<div class="container-container" {style}>
   <div
     class="task-container {title}
     {hovering == true ? 'containerHovered' : ''}
@@ -42,8 +44,11 @@
     <p>{description}</p>
 
     <!--{#if listGiven}-->
-    <ul class={detailDisplayed == true ? 'detailDisplayed' : ''} transition:fade>
+    <ul
+      class={detailDisplayed == true ? 'detailDisplayed' : ''}
+      transition:fade>
       {#each list as { list }}
+      
         <li>{list}</li>
       {/each}
     </ul>
@@ -57,14 +62,13 @@
     </p>
 
     {#if detailDisplayed}
-    <p id="exit-card">Click Anywhere Inside The Card To Go Back</p>
+      <p id="exit-card">Click Anywhere Inside The Card To Go Back</p>
     {/if}
 
   </div>
 
   <div
-    class="task-container {title}duplicated 
-    {detailDisplayed == true ? '' : 'hidden'}"
+    class="task-container {title}duplicated {detailDisplayed == true ? '' : 'hidden'}"
     on:click={displayDetails}
     transition:fade>
 
@@ -79,15 +83,15 @@
     </ul>
     <!--{/if}-->
 
-     <p
+    <p
       style={hovering == true ? 'opacity: 1' : 'opacity: 0'}
       id="clickMore"
       transition:fade>
       Click for More
     </p>
-    
+
     {#if detailDisplayed}
-    <p id="exit-card">Click Anywhere To Go Back</p>
+      <p id="exit-card">Click Anywhere To Go Back</p>
     {/if}
 
   </div>

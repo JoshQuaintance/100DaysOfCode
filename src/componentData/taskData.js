@@ -1,4 +1,4 @@
-	export let devLogs = {
+export let devLogs = {
 	Day1  : {
 		title       : "Day 1",
 		description : "Learning a new framework: Svelte.",
@@ -122,6 +122,59 @@
 			{ list: "Added loading animation" },
 			{ list: "Main page changed" },
 			{ list: "Added home button" }
+		]
+	},
+
+	Day13 : {
+		title       : "Day 13",
+		description : "Bugs",
+		list        : [
+			{ list: "Fixed some bugs on website" },
+			{ list: "Learned more about functional programming in FCC" }
+		]
+	},
+
+	Day14 : {
+		title       : "Day 14",
+		description : "Coding Marathon",
+		list        : [ { list: "Did some functional programming marathon" } ]
+	},
+
+	Day15 : {
+		title       : "Day 15",
+		description : "Projects Component",
+		list        : [
+			{ list: "Created a new component form projects" },
+			{ list: "Added hover image zoom-in effect" }
+		]
+	},
+
+	Day16 : {
+		title       : "Day 16",
+		description : "Styles",
+		list        : [
+			{ list: "Created tags component" },
+			{ list: "Created a simple function to show the tags according to the projects" },
+			
+		]
+	},
+
+	Day17 : {
+		title: "Day 17",
+		description: "Styling some bugs",
+		list :[
+			{ list: "Styled the projects Tab and the tags components" },
+			{ list: "Fixed some bugs" }
+		]
+	},
+
+	Day18 : {
+		title       : "Day 18",
+		description : "More Functionality",
+		list        : [
+			{ list: "Updated the projects for more functionality" },
+			{ list: "Projects tab now feed off of a JavaScript data file" },
+			{ list: "Created colors for tags and categories" }
 		]
 	}
 };
