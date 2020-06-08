@@ -1,11 +1,13 @@
 <script>
-  import Tasks from "./Tasks/Tasks.svelte";
-  import Projects from "./projects/projects.svelte";
+  import Tasks from "./Components/Tasks/Tasks.svelte";
+  import Projects from "./Components/projects/projects.svelte";
   import { loader } from "./scripts";
-  import { devLogs } from "./taskData";
+  import { devLogs } from "./componentData/taskData";
+  import { projectsData } from "./componentData/projectsData";
 
   let dataLength = Object.keys(devLogs);
   let lastOfDataList = dataLength.length;
+  //console.log(projectsData["project1"]["tags"]);
 
   // Count up function
   function countUpTo100(countFrom) {
@@ -51,7 +53,12 @@
   // ----------
 
   // More projects functions
-
+  let showProjects = false,
+    HTML = true,
+    SCSS = true,
+    JS = true,
+    jQuery = true,
+    Svelte = true;
   // ----------
 </script>
 
@@ -107,26 +114,33 @@
 <div class="shell">
 
   <main>
+    <!-- Main Title  -->
     <h1>Why hello there, Catalactics here...</h1>
     <p>
       Welcome to my
       <a href="https://100daysofcode.com" class="fancyLink" target="_blank">
         #100DaysOfCode
       </a>
-      Challenge Website Today is day
+      <!-- Day Counter  -->
+      Challenge Website. Today is day
       <span id="dayCount">{countUpTo100('May 20, 2020 00:00:00')}</span>
     </p>
+    <!-- ---------- -->
 
-    {#if showDevLogs == false}
+    <!-- Main Page -->
+    {#if showDevLogs == false && showProjects == false}
+      <!-- Showcase tabs container -->
       <div class="link-containers">
+
+        <!-- Projects showcase tab -->
         <div class="projects-cont">
           <span>Projects</span>
           <p style="margin-top: 50px;">Featured Project</p>
-          <Projects
-            projectTitle={'Codes Codes Codes!'} />
-
+          <Projects {...projectsData["project1"]}/>
         </div>
+        <!-- ---------- -->
 
+        <!-- Dev log showcase tab -->
         <div class="dev-log">
           <span>Dev Log</span>
           <h6>Latest From The Dev Logs</h6>
@@ -140,14 +154,27 @@
             View More
           </p>
         </div>
+        <!-- ---------- -->
+
       </div>
-    {:else}
+      <!-- ---------- -->
+
+      <!-- Dev Logs -->
+    {:else if showDevLogs}
       <div class="tasks-container">
 
         {#each dataLength as _, i}
           <Tasks {...devLogs[`${_}`]} />
         {/each}
 
+      </div>
+
+      <!-- ---------- -->
+
+      <!-- Projects Container -->
+    {:else if showProjects}
+      <div class="projects-container">
+        <Projects />
       </div>
     {/if}
   </main>
