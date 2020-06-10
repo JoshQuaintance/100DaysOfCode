@@ -1,8 +1,8 @@
 <script>
   import Tasks from "./Components/Tasks/Tasks.svelte";
-  import Projects from "./Components/Projects/projects.svelte";
-  import Header from "./Components/Header/header.svelte";
-  import Footer from "./Components/Footer/footer.svelte";
+  import Projects from "./Components/projects/projects.svelte";
+  import Header from "./Components/header/header.svelte";
+  import Footer from "./Components/footer/footer.svelte";
   import Title from "./Components/Title/title.svelte";
   import { loader } from "./scripts";
   import { devLogs } from "./componentData/taskData";
@@ -10,7 +10,7 @@
 
   let dataLength = Object.keys(devLogs);
   let lastOfDataList = dataLength.length;
-  
+
   //console.log(projectsData["project1"]["tags"]);
 
 
