@@ -1,8 +1,8 @@
 <script>
   import Tasks from "./Components/Tasks/Tasks.svelte";
-  import Header from "./Components/header/header.svelte";
+  import Header from "./Components/Header/header.svelte";
   import Projects from "./Components/projects/projects.svelte";
-  import Footer from "./Components/footer/footer.svelte";
+  import Footer from "./Components/Footer/footer.svelte";
   import Title from "./Components/Title/title.svelte";
 
   import { loader } from "./scripts";
