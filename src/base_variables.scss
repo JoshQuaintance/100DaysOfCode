@@ -18,3 +18,21 @@ $scss: #cd6799;
 $js: orange;
 $jQuery: #0769ad;
 $svelte: #ff3e00;
+
+// Some Basic CSS Mixins
+@mixin flexCenter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin after {
+	content: "";
+	position: absolute;
+}
+
+// Some basic CSS
+a {
+    text-decoration: none;
+    color: inherit;
+}
