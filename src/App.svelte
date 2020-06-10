@@ -13,7 +13,7 @@
   let lastOfDataList = dataLength.length;
 
   //console.log(projectsData["project1"]["tags"]);
-
+  //so i can push
 
   // Dev Log Option functions
   let showDevLogs = false;
