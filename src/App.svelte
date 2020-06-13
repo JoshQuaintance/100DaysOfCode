@@ -4,6 +4,7 @@
   import Projects from "./Components/projects/projects.svelte";
   import Footer from "./Components/Footer/footer.svelte";
   import Title from "./Components/Title/title.svelte";
+  
 
   import { loader } from "./scripts";
   import { devLogs } from "./componentData/taskData";

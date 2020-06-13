@@ -154,18 +154,14 @@ export let devLogs = {
 		description : "Styles",
 		list        : [
 			{ list: "Created tags component" },
-			{ list: "Created a simple function to show the tags according to the projects" },
-			
+			{ list: "Created a simple function to show the tags according to the projects" }
 		]
 	},
 
 	Day17 : {
-		title: "Day 17",
-		description: "Styling some bugs",
-		list :[
-			{ list: "Styled the projects Tab and the tags components" },
-			{ list: "Fixed some bugs" }
-		]
+		title       : "Day 17",
+		description : "Styling some bugs",
+		list        : [ { list: "Styled the projects Tab and the tags components" }, { list: "Fixed some bugs" } ]
 	},
 
 	Day18 : {
@@ -176,8 +172,63 @@ export let devLogs = {
 			{ list: "Projects tab now feed off of a JavaScript data file" },
 			{ list: "Created colors for tags and categories" }
 		]
+	},
+
+	Day19 : {
+		title       : "Day 19",
+		description : "Learning Functional Programming",
+		list        : [
+			{ list: "Learn more about Functional Programming" },
+			{ list: "Fixed some bugs on my site" },
+			{ list: "Planning out to make my portfolio" }
+		]
+	},
+
+	Day20 : {
+		title       : "Day 20",
+		description : "Cleaning Up Code",
+		list        : [
+			{ list: "Make use of my SCSS knowledge into the App, used Mixins to apply some basic CSS" },
+			{
+				list:
+					"Make more use of Components, made my code A Lot neater, but made my File tree a little cluttered :("
+			}
+		]
+	},
+
+	Day21 : {
+		title       : "Day 21",
+		description : "Finished this site",
+		list        : [
+			{ list: "Finished of the 100DaysOfCode Website, Cleaning it up and optimizing it" },
+			{ list: "New Project: Create myself some useful components for the future" }
+		]
+	},
+
+	Day22 : {
+		title       : "Day 22",
+		description : "New Project",
+		list        : [
+			{ list: "Started to make my own components" },
+			{ list: "Made a button components that have a feature like Bootstrap for CSS" }
+		]
+	},
+
+	Day23 : {
+		title       : "Day 23",
+		description : "Fun Day JavaScript",
+		list        : [
+			{ list: "Finished FCC Functional Programming" },
+			{ list: "Started and finished 3 Intermediate JavaScript Algorithm" },
+			{
+				list:
+					"Did a Script that makes anchor tags for my fellow Camper Moderator nhcarrigan It was really fun and easy"
+			}
+		]
 	}
 };
 /*
+
+
 
 */
