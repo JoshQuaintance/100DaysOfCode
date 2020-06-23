@@ -190,7 +190,7 @@ export let devLogs = {
 		list        : [
 			{ list: "Make use of my SCSS knowledge into the App, used Mixins to apply some basic CSS" },
 			{
-				list:
+				list :
 					"Make more use of Components, made my code A Lot neater, but made my File tree a little cluttered :("
 			}
 		]
@@ -221,9 +221,81 @@ export let devLogs = {
 			{ list: "Finished FCC Functional Programming" },
 			{ list: "Started and finished 3 Intermediate JavaScript Algorithm" },
 			{
-				list:
+				list :
 					"Did a Script that makes anchor tags for my fellow Camper Moderator nhcarrigan It was really fun and easy"
 			}
+		]
+	},
+
+	Day24 : {
+		title       : "Day 24",
+		description : "New Project",
+		list        : [ { list: "Started a new project: My Own Discord Bot" } ]
+	},
+
+	Day25 : {
+		title       : "Day 25",
+		description : "Discord.js",
+		list        : [ { list: "Learning how to use Discord.js" }, { list: "Implemented basic bot commands" } ]
+	},
+
+	Day26 : {
+		title       : "Day 26",
+		description : "More Commands",
+		list        : [ { list: "Added more commands to my bot" }, { list: "Published the bot code in GitHub" } ]
+	},
+
+	Day27 : {
+		title       : "Day 27",
+		description : "DataBase",
+		list        : [ { list: "Cleaned up my code" }, { list: "Learning MongoDB and Mongoose" } ]
+	},
+
+	Day28 : {
+		title       : "Day 28",
+		description : "Mastering Databases",
+		list        : [
+			{ list: "Cleaned up more of my code" },
+			{ list: "Finished learning MongoDB and Mongoose, time to continue it" }
+		]
+	},
+
+	Day29 : {
+		title       : "Day 29",
+		description : "Command Not Found!",
+		list        : [
+			{ list: "Finished cleaning up my code" },
+			{ list: "Implemented a function that returns an embed if the command prefix is not found." }
+		]
+	},
+
+	Day30 : {
+		title       : "Day 30",
+		description : "Roles with descriptions",
+		list        : [ { list: "Implementing role description adding on discord.js using MongoDB and Mongoose" } ]
+	},
+
+	Day31 : {
+		title       : "Day 31",
+		description : "Testing ideas",
+		list        : [
+			{ list: "Testing theories and ideas on implementing role description adding using MongoDB and Mongoose" }
+		]
+	},
+
+	Day32 : {
+		title       : "Day 32",
+		description : "Debug",
+		list        : [ { list: "Finished debugging theory on implementing role description adding." } ]
+	},
+
+	Day33 : {
+		title       : "Day 33",
+		description : "Role adding, DONE!",
+		list        : [
+			{ list: "Added a function that add roles from each respective server the bot is in" },
+			{ list: "Made function able to edit description of the role and store it in database" },
+			{ list: "Create a readme file for the bot repository" }
 		]
 	}
 };
